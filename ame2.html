@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обо мне</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: radial-gradient(ellipse at center, #1a0028 0%, #000000 100%);
+            overflow: hidden;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #eee;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+            position: relative;
+        }
+
+        .stars, .stars2, .stars3 {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: transparent;
+            box-shadow: 
+                20px 30px #fff, 50px 80px #fff, 90px 120px #fff, 200px 150px #fff, 
+                300px 200px #fff, 400px 100px #fff, 600px 80px #fff, 700px 200px #fff,
+                800px 50px #fff, 900px 300px #fff, 1000px 100px #fff, 1100px 400px #fff,
+                1200px 200px #fff;
+            animation: animStars 50s linear infinite;
+        }
+
+        .stars2 {
+            box-shadow: 
+                15px 40px #aaa, 70px 100px #aaa, 150px 200px #aaa, 250px 300px #aaa,
+                350px 400px #aaa, 450px 500px #aaa, 550px 600px #aaa, 650px 700px #aaa;
+            animation: animStars 100s linear infinite;
+        }
+
+        .stars3 {
+            box-shadow: 
+                30px 60px #666, 80px 120px #666, 170px 220px #666, 270px 320px #666,
+                370px 420px #666, 470px 520px #666, 570px 620px #666, 670px 720px #666;
+            animation: animStars 150s linear infinite;
+        }
+
+        @keyframes animStars {
+            from { transform: translateY(0); }
+            to { transform: translateY(-1000px); }
+        }
+
+        h1, p, .links {
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+        }
+
+        h1 { animation-delay: 0.5s; }
+        p { animation-delay: 1s; }
+        .links { animation-delay: 1.5s; }
+
+        @keyframes fadeIn {
+            to { opacity: 1; transform: translateY(0); }
+            from { opacity: 0; transform: translateY(20px); }
+        }
+
+        h1 {
+            margin-top: 20px;
+            font-size: 42px;
+            color: #fff;
+            text-shadow: 0 0 10px #fff;
+            z-index: 1;
+        }
+
+        p {
+            font-size: 20px;
+            max-width: 500px;
+            margin: 20px auto;
+            color: #ddd;
+            line-height: 1.6;
+            z-index: 1;
+        }
+
+        .links {
+            z-index: 1;
+        }
+
+        .links a {
+            display: inline-block;
+            margin: 10px;
+            padding: 14px 28px;
+            background: rgba(255, 255, 255, 0.85);
+            color: #2e003e;
+            text-decoration: none;
+            border-radius: 30px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            transition: transform 0.3s, background 0.3s;
+            font-size: 18px;
+        }
+
+        .links a i {
+            margin-right: 8px;
+        }
+
+        .links a:hover {
+            background: rgba(255, 255, 255, 1);
+            transform: translateY(-5px) scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="stars2"></div>
+    <div class="stars3"></div>
+
+    <h1>Привет, я <b>Аболтус</b>!</h1>
+    <p>Люблю болтать в флудах, обсуждать мемы с друзьями и просто ловить <i>кайф</i>.<br>Здесь ты можешь заглянуть в мою галактику!</p>
+
+    <div class="links">
+        <a href="https://t.me/SvxNovaX" target="_blank"><i class="fab fa-telegram"></i>Telegram</a>
+        <a href="https://t.me/Aurorauniver" target="_blank"><i class="fab fa-telegram"></i>Telegram Channel</a>
+        <a href="https://instagram.com/aboltussvx" target="_blank"><i class="fab fa-instagram"></i>Instagram</a>
+        <a href="mailto:rimuwu9@mail.com"><i class="fas fa-envelope"></i>Почта</a>
+    </div>
+</body>
+</html>
